@@ -1,3 +1,4 @@
-const App = require('./lib/Builder')
+const App = require("./lib/Builder");
 
-new App().initializeBuilder()
+new App().createPage()
+//.initializeBuilder();

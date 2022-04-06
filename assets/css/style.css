@@ -1,0 +1,23 @@
+:root {
+  --color1: #FAF0CA;
+  --color2: #0D3B66;
+  --color3: #F4D35E;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  color: var(--color3);
+  background-color: var(--color1);
+}
+
+header {
+  background-color: var(--color2);
+}
+
+a {
+  background-color: var(--color2);
+  color: var(--color3)
+}

@@ -1,11 +1,11 @@
 const Employee = require("../lib/Employee");
 
 describe("Employee Tests", () => {
-  const employee = new Employee("Bobo", 1, "xyz@gmail.com");
+  const employee = new Employee("alpha", 1, "xyz@gmail.com");
 
   it("Should create an employee object", () => {
     
-    expect(employee.name).toEqual('Bobo');
+    expect(employee.name).toEqual('alpha');
     expect(employee.id).toEqual(expect.any(Number));
     expect(employee.email).toEqual("xyz@gmail.com");
     expect(employee.role).toEqual("Employee");
