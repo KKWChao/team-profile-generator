@@ -21,3 +21,7 @@ a {
   background-color: var(--color2);
   color: var(--color3)
 }
+
+.card {
+  color: var(--color2)
+}
