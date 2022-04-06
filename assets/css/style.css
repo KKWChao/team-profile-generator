@@ -17,7 +17,7 @@ header {
   background-color: var(--color2);
 }
 
-a {
+header a {
   background-color: var(--color2);
   color: var(--color3)
 }
