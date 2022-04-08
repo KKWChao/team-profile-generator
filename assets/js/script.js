@@ -1,6 +1,9 @@
 // ? why doesnt require import work?
-
+const teamPageGenerator = require('../lib/PageTemplate.js');
+console.log(teamPageGenerator)
 var main_Container = document.getElementById("main-container");
+
+// demo data to be replaced with builder input
 var demoData = [
   {
     name: "Alpha",
@@ -30,22 +33,41 @@ var demoData = [
     role: "Engineer",
     github: "Refactor",
   },
+  {
+    name: "Echo",
+    id: 1,
+    email: "xyz@gmail.com",
+    role: "Manager",
+    officeNumber: "333",
+  },
+  {
+    name: "Foxtrot",
+    id: 1,
+    email: "xyz@gmail.com",
+    role: "Intern",
+    school: "Testing State",
+  },
+  {
+    name: "Golf",
+    id: 1,
+    email: "xyz@gmail.com",
+    role: "Intern",
+    school: "Response State",
+  },
 ];
 
 function cardCreator(data) {
-  // update counter with input later
-  let count = 5;
+  let count = data.length;
 
   for (let i = 0; i < count; i++) {
     var card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card", "shadow");
     card.style.width = "15rem";
     card.setAttribute("card", i);
 
     var cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
 
-    // update name with input later
     var cardTitle = document.createElement("h5");
     cardTitle.classList.add("card-title");
     cardTitle.classList.add("text-center");
@@ -62,20 +84,15 @@ function cardCreator(data) {
     var cardListUl = document.createElement("ul");
     cardListUl.classList.add("list-group");
 
-    // update ID with input later
     var cardListID = document.createElement("li");
     cardListID.classList.add("list-group-item");
     cardListID.setAttribute("card-id", i);
     cardListID.textContent = `ID: ${data[i].id}`;
 
-    // update Email with input later
     var cardListEmail = document.createElement("li");
     cardListEmail.classList.add("list-group-item");
     cardListEmail.setAttribute("card-email", i);
     cardListEmail.textContent = `Email: ${data[i].email}`;
-
-    // var cardListLi = document.createElement('li')
-    // cardListLi.classList.add('list-group-item')
 
     main_Container.append(card);
 
@@ -126,34 +143,4 @@ function cardCreator(data) {
     }
   }
 }
-
-
-function managerOffice(data) {
-  return cardListOffice;
-}
-cardCreator(demoData);
-function managerOffice(data) {
-  var cardListOffice = document.createElement("li");
-  cardListOffice.classList.add("list-group-item");
-  cardListOffice.textContent = `Office Number: ${data.officeNumber}`;
-
-  return cardListOffice;
-}
-
-function engineerGithub(data) {
-  var cardListGithub = document.createElement("li");
-  cardListGithub.classList.add("list-group-item");
-  cardListGithub.textContent = `Github: ${data.github}`;
-
-  cardListUl.append(cardListGithub);
-}
-
-function internCard(data) {
-  var cardListSchool = document.createElement("li");
-  cardListSchool.classList.add("list-group-item");
-  cardListSchool.textContent = `Github: ${data.school}`;
-
-  cardListUl.append(cardListSchool);
-}
-
 cardCreator(demoData);

@@ -29,3 +29,8 @@ body h1 {
 .card {
   color: var(--color2);
 }
+
+footer {
+  background-color: var(--color2);
+}
+
