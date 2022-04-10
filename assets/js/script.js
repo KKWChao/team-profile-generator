@@ -1,6 +1,5 @@
 // ? why doesnt require import work?
-const teamPageGenerator = require('../lib/PageTemplate.js');
-console.log(teamPageGenerator)
+
 var main_Container = document.getElementById("main-container");
 
 // demo data to be replaced with builder input
